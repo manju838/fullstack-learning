@@ -2,7 +2,7 @@ This repo contains code for various projects that are learnt and it also has all
 
 ## 1. 3D Portfolio Project:
 
-Status: In Progress (28:55min/2:53:52)
+Status: In Progress (44:48min/2:53:52)
 
 This is a react portfolio page developed from scratch including threejs usage, done based on 
 <www.youtube.com/watch?v=FkowOdMjvYo&t=347s>
@@ -82,9 +82,27 @@ For linking the jsx pages to website (which is controlled by App.jsx), change ``
 #### d) Add 3D stuff into website
 Install React Three fiber, a react library built on top of threejs and links plane threejs which is javascript code with react.
 ```bash
-npm install three @types/three @react-three/fiber
+npm install three @types/three @react-three/fiber @react-three/drei @react-spring/three
 ```
-This website has 3D content in Home.jsx so import Canvas from @react-three/fiber. This stands as the main DOM(Document Object Model) element and all 3D content is encompassed within this DOM. three refers to native threejs and is a dependency for react-three/fiber and @types/three is an optional package for typescript
+This website has 3D content in Home.jsx so import Canvas from @react-three/fiber. This stands as the main DOM(Document Object Model) element and all 3D content is encompassed within this DOM. 
+
+three refers to native threejs and is a dependency for react-three/fiber, @types/three is an optional package for typescript and drei provides readymade abstractions for react-three/fiber that provides cameras, controls, shaders etc.@react-spring/three is used for 3d animations.
+
+"w-full h-screen" under className defines fullscreen for canvas in Home.jsx page, and camera has near and far properties defining the near and far distance viewed in camera.
+
+Suspense is a component of react and helps in rendering the loading screen.
+
+
+Convert glb/gltf files into jsx format using <gltf.pmnd.rs/> and after modifying settings use exports/copy to clipboard to get the code and paste it in your jsx file. This is a converter created by official react developers.
+
+Since my Home page has 3d content, the glb file is converted into jsx file and saved in models/Island.jsx file castShadow and receiveShadow were removed, group tag in the return fn is changed to a.group tag that incorporates animation using react-spring/three library, useGLTF fn that directly call for the glb are replaced by a variable that accesses the assets folder(this has all the glb content for this webpage, downloaded from youtube video description) using useRef fn.
+
+Also export assetsIncluded in vite.config.js to allow glb files to be accessible. Not doint this will throw an error on the webpage as it is built using vitejs and it doesn't have access to glbs.
+
+In the Home.jsx file we are importing this Island.jsx file so ```adjustIslandForScreenSize()``` function is used to adjust the glb positioning, size and rotation depending on the screen size and the Island class from the jsx file is used (along with the sizing parameters from ```adjustIslandForScreenSize()```) inside the Suspense component as this is inside our canvas and react screen rendering part.
+
+#### e) Add lighting for the 3D asset
+ 
 
 
 #### Note: Shortcuts used here are for windows and working environment is in VSCode.
