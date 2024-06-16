@@ -1,0 +1,148 @@
+# This is the syntax for a comment in yaml file. There are no multiline comments in YML.
+"apple": "This is a key value pair, a datastructure in YAML"
+---
+# The above triple dash is used to seperate various data structures into different objects when deserialising YAML file(which is a dataserialisation language)
+
+# This is lists, another datastructure in YAML
+- apple
+- mango
+- pineapple
+- banana
+
+---
+# This is blocks, another datastructure in YAML
+cities:
+ - Delhi
+ - Mumbai
+ - delhi
+ - Chennai
+ - Kolkata
+
+# YAML is indentation (spaces) and case sensitive and different cases are different entries in the datastructure   
+
+---
+# This is flow datatype, another datastructure in YAML
+cities: [Delhi, Mumbai, delhi, Chennai, Kolkata]
+
+---
+# This is another way to represent data in YML files, its similar to json bit lacks the quotes.
+{mango: "yellow fruit", age: 56}
+
+---
+# "|" is needed if the value is written in multiple lines, otherwise it gives error.
+bio: |
+I am Manjunadh Kandavalli.
+I am learning YML now.
+
+---
+# write a single line in multiple lines
+message: >
+this will
+all be in
+a single line
+---
+# same as
+message: !!str this will all be in one single line
+---
+number: 5473
+---
+marks: 98.76
+---
+booleanValue: !!bool No # n, N, false, False, FALSE
+# same for true -> yes, y, Y
+
+# specify the type
+zero: !!int 0
+positiveNum: !!int 45
+negativeNum: !!int -45
+binaryNum: !!int 0b11001
+octalNum: !!int 06574
+hexa: !!int 0x45
+commaValue: !!int +540_000 # 540,000
+---
+exponential numbers: 6.023E56
+---
+# floating point numbers
+marks: !!float 56.89
+infinite: !!float .inf
+---
+not a num: .nan
+
+# null
+surname: !!null Null # or null NULL ~
+~: this is a null key
+
+# dates and time
+date: !!timestamp 2002-12-14
+india time: 2001-12-15T02:59:43.10 +5:30
+no time zone: 2001-12-15T02:59:43.10
+
+# key: value pairs are called maps
+!!map
+
+# nested mappings: map within an map
+name: Kunal Kushwaha
+role:
+  age: 78
+  job: student
+  
+# same as
+name: Kunal Kushwaha
+role: { age: 78, job: student}
+
+# pairs: keys may have duplicate values
+# !!pairs
+
+pair example: !!pairs
+ - job: student
+ - job: teacher
+
+# same as
+pair example: !!pairs [job: student, job: teacher]
+# this will be an array of hashtables
+
+# !!set will allow you to have unique values
+names: !!set
+ ? Kunal
+ ? Apoorv
+ ? Rahul
+
+# dictionary !!omap
+people: !!omap
+  - Kunal:
+     name: Kunal Kushwaha
+     age: 78
+     height: 678
+  - Rahul:
+     name: Rahul OP
+     age: 50
+     height: 456
+
+# reusing some properties using anchors
+likings: &likes
+  fav fruit: mango
+  dislikes: grapes
+
+person1:
+  name: Kunal Kushwaha
+  <<: *likes
+
+person2:
+  name: Rahul
+  <<: *likes
+  dislikes: berries
+
+# this will look like
+person2:
+  name: Rahul
+  fav fruit: mango
+  dislikes: berries
+
+# Basically the above example first copies the properties from "&" when it sees "<<: *" and then updates the files that are again specified below(dislikes property I mean)
+person3:
+  name: Apoorv
+  fav fruit: mango
+  dislikes: grapes
+
+# The below three dots is used to end the YAML file. This is like slash tag (</head>)  in HTML.
+...
