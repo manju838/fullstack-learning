@@ -12,6 +12,8 @@ Last command creates a master branch and pushes it into it, from next time maste
 
 If repo is not owned, then create a new branch and push it, the repo owners check and merge the branch.
 
+If already initialised repo needs to be pushed to a different repo, then git init reinitialise, and then git remote set-url origin https://github.com/newrepo.git to update the remote url.
+
 
 
 

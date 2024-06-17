@@ -16,3 +16,7 @@ This is an introductory course on YAML files done based on <www.youtube.com/watc
 ## 4. Devops with Gitlab:
 
 This is an introductory course using Gitlab to build and deploy applications to AWS following <www.youtube.com/watch?v=PGyhBwLyK2U&t=11581s>. The learnings also include basics of Devops and CI/CD (Continuous Integration/ Continuous Deployment) principles that are used even in other tools.
+
+## 5. NGINX for Beginners:
+
+This is an introductory course on NGINX based on <www.youtube.com/watch?v=9t9Mp0BGnyI>.
