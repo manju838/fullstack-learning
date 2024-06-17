@@ -19,8 +19,10 @@ If already initialised repo needs to be pushed to a different repo, then git ini
 
 #### Markdown Formats:
 
-To check the formating visually use <www.makeareadme.com> and for cheatsheet refer to <github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet>
+To check the formating visually use <www.makeareadme.com> and for cheatsheet refer to <github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet> or <www.markdownguide.org/basic-syntax>
 
 1) To make a link a url in readme.md, enclose it in angular brackets such as <www.youtube.com>. Alternatively to name the hyperlink, the format is to enclose the name in square brackets and immediately followed by link enclosed in curly brackets. Make sure https:// part is avoided for the link to work properly.
 
 2) To write commands enclose the commands with (```) and if the command is a bash command follow up opening triple quotes with a "bash" keyword and if it is a python command follow up with a "python" keyword. Look at the readme.md file's text in 3d_portfolio_project directory for example.
+
+3) The format to add an image is as follows ```![img_name_not_displayed_in .md](assets/images/nginx_placement.png)```. Refer to md in NGINX-for-Beginners sub repo.
