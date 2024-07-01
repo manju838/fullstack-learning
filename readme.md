@@ -20,3 +20,9 @@ This is an introductory course using Gitlab to build and deploy applications to 
 ## 5. NGINX for Beginners:
 
 This is an introductory course on NGINX based on <www.youtube.com/watch?v=9t9Mp0BGnyI>.
+
+## 6. One Billion Row Challenge:
+
+This is an open challenge where we need to parse through a 13 GB file that has a billion lines each with temperature data. The challenge is about how fast we can parse through the rows. Some inspiration for the implementations are based on <www.youtube.com/watch?v=utTaPW32gKY>
+
+## 7. Django tutorial <https://www.youtube.com/watch?v=o0XbHvKxw7Y>

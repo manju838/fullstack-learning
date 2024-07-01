@@ -14,6 +14,7 @@ If repo is not owned, then create a new branch and push it, the repo owners chec
 
 If already initialised repo needs to be pushed to a different repo, then git init reinitialise, and then git remote set-url origin https://github.com/newrepo.git to update the remote url.
 
+To update local folder based on changes to github branch, do ```git pull origin main``` for updating code for main branch
 
 
 
@@ -26,3 +27,5 @@ To check the formating visually use <www.makeareadme.com> and for cheatsheet ref
 2) To write commands enclose the commands with (```) and if the command is a bash command follow up opening triple quotes with a "bash" keyword and if it is a python command follow up with a "python" keyword. Look at the readme.md file's text in 3d_portfolio_project directory for example.
 
 3) The format to add an image is as follows ```![img_name_not_displayed_in .md](assets/images/nginx_placement.png)```. Refer to md in NGINX-for-Beginners sub repo.
+
+4) To view a markdown file in vscode, use Ctrl + K and then press "v" key. This opens up the markdown view as a new panel on the right.
