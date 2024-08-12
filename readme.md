@@ -26,3 +26,7 @@ This is an introductory course on NGINX based on <www.youtube.com/watch?v=9t9Mp0
 This is an open challenge where we need to parse through a 13 GB file that has a billion lines each with temperature data. The challenge is about how fast we can parse through the rows. Some inspiration for the implementations are based on <www.youtube.com/watch?v=utTaPW32gKY>
 
 ## 7. Django tutorial <https://www.youtube.com/watch?v=o0XbHvKxw7Y>
+
+## 8. SQL tutorial <www.youtube.com/watch?v=KBDSJU3cGkc>
+
+## 9. Linux Basics
