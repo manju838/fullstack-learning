@@ -27,6 +27,18 @@ This is an open challenge where we need to parse through a 13 GB file that has a
 
 ## 7. Django tutorial <https://www.youtube.com/watch?v=o0XbHvKxw7Y>
 
-## 8. SQL tutorial <www.youtube.com/watch?v=KBDSJU3cGkc>
+## 8. SQL
 
 ## 9. Linux Basics
+
+## 10. Create-React-App
+
+## 11. Minecraft-clone
+
+## 12. Python-Practice
+
+## 13. Supervisor-for-Beginners
+
+## 14. System-Design-Basics
+
+## 15. Working-with-YAML-files

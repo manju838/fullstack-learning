@@ -1,18 +1,13 @@
-.navbar {
-  background-color: #060b26;
-  height: 80px;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-}
-
 .menu-bars {
-  margin-left: 2rem;
-  font-size: 2rem;
-  background: none;
+  /* Controls the appearance of the hamburger menu icon and closing icon if hamburger menu is active (Sizing of icon, margin) */
+  margin-left: 2rem; /* Adds space to the left of the hamburger icon */
+  font-size: 2rem; /* Sets the size of the hamburger icon */
+  /* Remove any background */
+  background: black;
 }
 
 .nav-menu {
+  /* The sidebar is initially hidden (left: -100%), but when the active class is added, it slides into view (left: 0). */
   background-color: #060b26;
   width: 250px;
   height: 100vh;
@@ -21,7 +16,7 @@
   position: fixed;
   top: 0;
   left: -100%;
-  transition: 850ms;
+  transition: 850ms; /* Animation duration for the sidebar */
 }
 
 .nav-menu.active {
@@ -30,6 +25,7 @@
 }
 
 .nav-text {
+  /* Defines the styling for the sidebar menu items. They are displayed as flex items and have padding for spacing. */
   display: flex;
   justify-content: start;
   align-items: center;

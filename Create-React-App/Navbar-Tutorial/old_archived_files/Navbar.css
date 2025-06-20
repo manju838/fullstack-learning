@@ -1,0 +1,78 @@
+.navbar {
+    /* The navbar at the top of the page */
+  
+    background-color: #060b26; /* Background color for the navbar */
+    height: 80px; /* Height of the navbar */
+    display: flex; /* Flexbox for aligning items */
+    justify-content: start; /* Aligns content to the start (left) */
+    align-items: center; /* Vertically centers the items */
+  }
+
+  .menu-bars {
+    /* Controls the appearance of the hamburger menu icon and closing icon if hamburger menu is active (Sizing of icon, margin) */
+    margin-left: 2rem; /* Adds space to the left of the hamburger icon */
+    font-size: 2rem; /* Sets the size of the hamburger icon */
+    background: none; /* No color */
+  }
+  
+  .nav-menu {
+    /* The sidebar is initially hidden (left: -100%), but when the active class is added, it slides into view (left: 0). */
+    background-color: #060b26;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 850ms; /* Animation duration for the sidebar */
+  }
+  
+  .nav-menu.active {
+    left: 0;
+    transition: 350ms;
+  }
+  
+  .nav-text {
+    /* Defines the styling for the sidebar menu items. They are displayed as flex items and have padding for spacing. */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 16px;
+    list-style: none;
+    height: 60px;
+  }
+  
+  .nav-text a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 18px;
+    width: 95%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    border-radius: 4px;
+  }
+  
+  .nav-text a:hover {
+    background-color: #1a83ff;
+  }
+  
+  .nav-menu-items {
+    width: 100%;
+  }
+  
+  .navbar-toggle {
+    background-color: #060b26;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+  }
+  
+  span {
+    margin-left: 16px;
+  }
+  

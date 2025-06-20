@@ -27,3 +27,6 @@ In react-router-dom v6, "Switch" is replaced by routes "Routes". (https://stacko
 1. Entry
 
 2. To add pages: https://www.sitepoint.com/creating-a-navbar-in-react/
+
+
+https://www.youtube.com/watch?v=-MlNBTSg_Ww <==> React hooks

@@ -169,12 +169,107 @@ export default Counter;
   * Occurs when component is removed from the DOM.
 
 
+## React Navigation
+
+In a React application, navigation can be handled in two primary ways:
+1) State-Based Navigation (Without Changing URL Paths): 
+  * Applied mainly in single-page applications (SPA)
+  * In a state-based navigation scenario,a state variable is set that triggers the rendering of the next page component.
+
+  ```
+  const [currentPage, setCurrentPage] = useState('home');
+
+return (
+  <div>
+    <nav>
+      <button onClick={() => setCurrentPage('home')}>Home</button>
+      <button onClick={() => setCurrentPage('about')}>About</button>
+      <button onClick={() => setCurrentPage('contact')}>Contact</button>
+    </nav>
+    {currentPage === 'home' && <Home />}
+    {currentPage === 'about' && <About />}
+    {currentPage === 'contact' && <Contact />}
+  </div>
+);
+
+  ```
+2) Route-Based Navigation (With Changing URL Paths)
+  * React Router is commonly used to manage this type of navigation using Route and Link components.
+  * In a route-based navigation scenario, "useHistory" from React Router is used to programmatically navigate to the next page.
+  ```
+  import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
+function App() {
+  return (
+    <Router>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/contact">Contact</Link>
+      </nav>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+      </Switch>
+    </Router>
+  );
+}
+
+  ```
+
+
 
 ## [React Hooks](https://www.freecodecamp.org/news/full-guide-to-react-hooks/)
 
 
+## [Array vs Object Destructuring in JavaScript](https://www.freecodecamp.org/news/array-vs-object-destructuring-in-javascript/)
 
+**The destructuring assignment in JavaScript provides a neat and DRY (Don’t Repeat Yourself) way to extract values from your arrays and objects.**
 
+**Array Destructuring** is a unique technique that allows you to neatly extract an array’s value into new variables.
+
+```javascript
+/* Without Array Destruction
+
+This method creates a lot of variables and becomes more messy as variables increase
+*/
+const profile = ["Oluwatobi", "Sofela", "codesweetly.com"];
+
+const firstName = profile[0];
+const lastName = profile[1];
+const website = profile[2];
+
+console.log(firstName); // "Oluwatobi"
+console.log(lastName); // "Sofela"
+console.log(website); // "codesweetly.com"
+
+/* ======================================================================= */
+/* With Array Destruction
+
+All the variable definitions are done by javascript and not explicitly "destructured".Here "profile" array is destructured by referencing it.   
+*/
+const profile = ["Oluwatobi", "Sofela", "codesweetly.com"];
+
+const [firstName, lastName, website] = profile;
+
+console.log(firstName); // "Oluwatobi"
+console.log(lastName); // "Sofela"
+console.log(website); // "codesweetly.com"
+
+/* ======================================================================= */
+/* Setting Default values in Array Destructuring */
+const [firstName = "Tobi", website = "CodeSweetly"] = ["Oluwatobi"];
+
+console.log(firstName); // "Oluwatobi"
+console.log(website); // "CodeSweetly"
+```
+
+The three dots (...) in the snippet above symbolize the rest operator. The rest operator (...) instructs the computer to put the rest of some specific user-supplied arguments into an array.
+
+```javascript
+const [firstName, ...otherInfo] = ["Oluwatobi", "Sofela", "codesweetly.com"];
+```
 
 
 
@@ -208,3 +303,37 @@ npm install ajv ajv-keywords --save
 ```
 
 gradio####################################
+
+
+## [Arrow Functions](https://www.freecodecamp.org/news/javascript-arrow-functions-in-depth/)
+
+The main method used to create a function in JavaScript, is using the ```function``` keyword followed by the function name. 
+The arrow function allows you to create a function expression by assigning it to a variable.
+
+```javascript
+// Regular JavaScript function
+function greetings(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+greetings('John'); // Hello, John!
+
+// Arrow function version
+const greetings = name => {
+  console.log(`Hello, ${name}!`);
+};
+
+greetings('John'); // Hello, John!
+
+// Arrow function syntax
+const myFunction = (param1, param2, ...) => {
+  // function body
+}
+
+//myFunction is the variable here while the fn can also be called with myFunction()
+// "=>" decalres the beginning if the function and {} are used if a multiline function is used and avoided if its a single liner function
+
+```
+
+### Steps to convert Regular function into Arrow function
+

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {Navbar } from './components/index';
  
 // import {} from './components/index.js';
-import {Home, EditFloorplan, Design, AddItems, Team, Support} from './pages/index';
+import {Home, EditFloorplan, Design, AddItems, Team, Support, Canvas} from './pages/index';
 
 /*
 "Switch" is changed to "Routes" in React Router v6
