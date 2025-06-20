@@ -3,5 +3,8 @@ This section follows https://github.com/SuboptimalEng/three-js-tutorials for lea
 ```bash
 # Make sure Node.js V18+ is installed and preferably a higher version based on the application
 npm create vite@latest
+cd three-setup
+npm install
+npm run dev
 
 ```
